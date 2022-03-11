@@ -4,7 +4,7 @@ import (
 	"os"
 )
 
-func WriteAllText(path string, content:string) (err Error) {
+func WriteAllText(path string, content string) (err Error) {
 	
 	//os.O_WRONLY | os.O_CREATE
 	file, err := os.OpenFile(path, os.O_WRONLY |os.O_TRUNC | os.O_CREATE, 0666)
