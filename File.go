@@ -36,3 +36,13 @@ func ReadAllText(path string) (string, error) {
 	}
 	return string(data), nil
 }
+
+
+
+func WriteAllBytes(filePath string, data []byte) error {	
+	err := ioutil.WriteFile(filePath, data, 0644)
+	if err != nil {
+		return err
+	}
+	return nil
+}
